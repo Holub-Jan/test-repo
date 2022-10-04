@@ -1,6 +1,6 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push, pull_request]
+on: [pull_request]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -16,4 +16,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: echo "${{ github.event.number }}"
+      - run: echo "pull request number is  ${{ github.event.number }}"
+      - run: echo "running on branch is ${{ github.head_ref }}"
+      - run: echo "pr${{ github.event.number }}-${{ github.head_ref }}"
