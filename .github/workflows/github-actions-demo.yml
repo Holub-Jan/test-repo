@@ -16,4 +16,5 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: echo "${{ github.event.number }}"
+      - run: echo "pull request number_ ${{ github.event.number }}"
+      - run: echo "running on branch_ ${GITHUB_REF##*/}"
