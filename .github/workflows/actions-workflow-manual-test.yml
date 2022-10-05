@@ -16,6 +16,10 @@ on:
         description: 'Bolean option'
         required: false
         type: boolean
+      customInput:
+        description: 'Custom input'
+        required: true
+        type: string
       environment:
         description: 'Enviroment variable will be: '
         type: environment
