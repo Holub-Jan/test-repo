@@ -17,7 +17,7 @@ on:
         required: false
         type: boolean
       customInput:
-        description: 'Custom input'
+        description: 'Input ChannelID ( format "pr{pull request number}-{branch name}")'
         required: true
         type: string
 jobs:
