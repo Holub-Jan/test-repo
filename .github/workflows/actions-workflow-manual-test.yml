@@ -20,10 +20,6 @@ on:
         description: 'Custom input'
         required: true
         type: string
-      environment:
-        description: 'Enviroment variable will be: '
-        type: environment
-        required: false
 jobs:
   log-the-inputs:
     runs-on: ubuntu-latest
@@ -31,10 +27,8 @@ jobs:
       - run: |
           echo "Log level: $LEVEL"
           echo "Tags: $TAGS"
-          echo "Environment: $ENVIRONMENT"
           echo "Custom input: $cusInput"
         env:
           LEVEL: ${{ inputs.logLevel }}
           TAGS: ${{ inputs.tags }}
-          ENVIRONMENT: ${{ inputs.environment }}
-          cusInput: ${{ inputscustomInput }}
+          cusInput: ${{ inputs.customInput }}
