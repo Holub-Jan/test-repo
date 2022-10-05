@@ -23,7 +23,7 @@ on:
       environment:
         description: 'Enviroment variable will be: '
         type: environment
-        required: true
+        required: false
 jobs:
   log-the-inputs:
     runs-on: ubuntu-latest
