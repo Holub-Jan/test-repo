@@ -30,4 +30,4 @@ jobs:
       - run: echo "pr${{ github.event.number }}-${{ github.head_ref }}"
       - if: github.event_name == 'workflow_dispatch'
         run: echo "CHANID=${{ inputs.channelIdInput }}" >> $GITHUB_ENV
-      - run: echo '$env.CHANID'
+      - run: echo '${{ env.CHANID }}'
