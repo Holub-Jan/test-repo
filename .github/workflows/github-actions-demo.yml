@@ -29,5 +29,5 @@ jobs:
       - run: echo "running on branch is ${{ github.head_ref }}"
       - run: echo "pr${{ github.event.number }}-${{ github.head_ref }}"
       - if: github.event_name == 'workflow_dispatch'
-        run: echo "CHANID=${{ inputs.channelIdInput }}" >> $GITHUB_ENV
+        run: "CHANID=${{ inputs.channelIdInput }} >> $GITHUB_ENV "
       - run: echo '${{ env.CHANID }}'
