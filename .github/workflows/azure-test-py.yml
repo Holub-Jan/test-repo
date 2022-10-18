@@ -13,8 +13,7 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.SECRET_ACCESS }}
-      - name: Python setup
-        name: Set up Python 3.x
+      - name: Set up Python 3.x
         uses: actions/setup-python@v4
         with:
           # Semantic version range syntax or exact version of a Python version
