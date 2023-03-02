@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo email
-        run: echo 'Email ${{ github.event.commits.committer.email }}'
+      - name: Echo message
+        run: echo "message ${{ github.event.commits.message }}"
       - name: Echo ref
         run: echo echo "Deploying to production server on branch $GITHUB_REF"
