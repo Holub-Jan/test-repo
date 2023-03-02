@@ -7,4 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo context
-        run: echo '${{ toJSON(github) }}'
+        run: echo 'Email ${{ github.event.commits.committer.email }}'
+             echo 'Message ${{ github.event.commits.message }}'
