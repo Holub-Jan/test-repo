@@ -9,6 +9,4 @@ jobs:
       - name: Echo email
         run: echo 'Email ${{ github.event.commits.committer.email }}'
       - name: Echo ref
-        run : echo 'Message ' $GITHUB_REF
-      - name: Echo ref
-        run: echo 'Message ' ${{ GITHUB_REF }}
+        run: echo 'Message ${{ GITHUB_REF }}'
