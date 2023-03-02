@@ -7,6 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo message
-        run: echo "message ${{ github.event.commits.message }}"
-      - name: Echo ref
-        run: echo echo "Deploying to production server on branch $GITHUB_REF"
+        run: echo "Deploying to production server on branch $GITHUB_EVENT_COMMITS_MESSAGE"
