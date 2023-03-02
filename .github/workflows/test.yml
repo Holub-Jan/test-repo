@@ -1,0 +1,10 @@
+name: testing content on push
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo context
+        run: echo "$GITHUB_CONTEXT"
