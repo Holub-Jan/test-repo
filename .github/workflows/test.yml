@@ -6,6 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo context
+      - name: Echo email
         run: echo 'Email ${{ github.event.commits.committer.email }}'
-             echo 'Message ${{ github.event.commits.message }}'
+      - name: Echo message
+        run : echo 'Message ${{ github.event.commits.message }}'
