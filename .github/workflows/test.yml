@@ -9,4 +9,4 @@ jobs:
       - name: Echo email
         run: echo 'Email ${{ github.event.commits.committer.email }}'
       - name: Echo ref
-        run: echo 'Message ${{ GITHUB_REF }}'
+        run: echo echo "Deploying to production server on branch $GITHUB_REF"
