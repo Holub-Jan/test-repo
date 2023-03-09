@@ -1,7 +1,7 @@
 name: calling workflow
 on: push
+env:
+  TEST_VAR: test_var
 jobs:
   caller:
-    env:
-      TEST_VAR: test_var
     uses: ./.github/workflows/test.yml
