@@ -3,6 +3,9 @@ name: testing content on push
 on:
   workflow_call:
 
+env:
+  TEST_VAR: test_var
+
 jobs:
   pyvariables:
     runs-on: ubuntu-latest
