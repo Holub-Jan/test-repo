@@ -2,5 +2,4 @@ name: calling workflow
 on: push
 jobs:
   caller:
-    uses: ./.github/workflows/test.yml@main
-
+    uses: ./.github/workflows/test.yml
