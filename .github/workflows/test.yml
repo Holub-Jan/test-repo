@@ -21,4 +21,12 @@ jobs:
         run: python gh_variables.py
 
       - name: what is X
-        run: echo github.event_name
+        run: echo ${{ github.event_name }}
+
+  print_context:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          EVENT_CONTEXT: ${{ toJSON(github.event) }}
+        run: |
+          echo $EVENT_CONTEXT
