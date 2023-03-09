@@ -14,20 +14,8 @@ jobs:
           python-version: 3.9
 
       - name: Run py on push
-        if: ${{ GITHUB_REF == 'push' }}
         env:
             USER_EMAIL: ${{ github.event.head_commit.author.email }}
             USERNAME: ${{ github.event.head_commit.author.username }}
             DESCRIPTION: ${{ github.event.head_commit.message }}
         run: python gh_variables.py
-
-      - name: what is X
-        run: echo "${{ GITHUB_REF }}"
-
-      - name: Run py on pr
-        if: ${{ GITHUB_REF == 'pull_request' }}
-        env:
-          USER_EMAIL: ${{ github.event.head_commit.author.email }}
-          USERNAME: ${{ github.event.head_commit.author.username }}
-          DESCRIPTION: ${{ github.event.head_commit.message }}
-
