@@ -13,7 +13,6 @@ class CustomConvert:
             return
 
         with open(os.path.abspath(os.getcwd())+'/'+file_name, 'r') as file:
-            print('File path: ', os.path.abspath(os.getcwd())+file_name)
             for line in file.readlines():
                 print(line)
 

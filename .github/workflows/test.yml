@@ -1,9 +1,10 @@
 name: testing content on push
 
-on: [push]
+on:
+  workflow_call:
 
 jobs:
-  build:
+  pyvariables:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
