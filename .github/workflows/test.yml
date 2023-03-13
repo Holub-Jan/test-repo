@@ -23,8 +23,8 @@ jobs:
             DESCRIPTION: ${{ github.event.head_commit.message }}
         run: python gh_variables.py
 
-      - name: what is X
-        run: echo ${{ github.event_name }}
+      - name: what is X on pr
+        run: echo ${{ github.repository }}
 
   print_context:
     runs-on: ubuntu-latest
