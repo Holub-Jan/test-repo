@@ -27,6 +27,11 @@ jobs:
       - name: what is X on pr
         run: echo ${{ github.repository }}
 
+      - name: Sets env vars for release
+        run: |
+          echo "VARIABLE=some_variable" >> $GITHUB_ENV
+        if: ${{ github.event_name != "push"}}
+
   print_context:
     runs-on: ubuntu-latest
     steps:
