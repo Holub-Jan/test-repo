@@ -1,6 +1,6 @@
 def main():
     import os
-    from reader.chreader import CHReader
+    from chreader.chreader import CHReader
 
     email = os.environ.get('USER_EMAIL')
     description = os.environ.get('DESCRIPTION')
