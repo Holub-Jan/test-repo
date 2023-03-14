@@ -8,14 +8,14 @@ class Version(BaseModel):
     bug_fixes: bool
 
 
-class CustomConvert:
-    def __init__(self):
-        self._file_list = ['CHANGELOG.md', 'RELEASE-NOTES.md']
+class CHReader:
+    def __init__(self, file_names: list):
+        self._file_list = file_names
 
     def get_transcript(self):
-        file_name = self._file_present()
+        file_name = self.get_file_name()
         if not file_name:
-            print('File "CHANGELOG.md" or "RELEASE-NOTES.md" not found!')
+            print(f'File was not found within expected list of names: {self._file_list}')
             return None
 
         with open(os.path.abspath(os.getcwd())+'/'+file_name, 'r') as file:
@@ -49,7 +49,7 @@ class CustomConvert:
         versions.append(block)
         return versions
 
-    def _file_present(self):
+    def get_file_name(self):
         main_dir = os.listdir(os.getcwd())
         for file in self._file_list:
             if file in main_dir:
@@ -65,7 +65,3 @@ class CustomConvert:
                     return 'features'
                 elif line[4:] == 'Bug Fixes':
                     return 'bugs'
-
-
-if __name__ == "__main__":
-    pass

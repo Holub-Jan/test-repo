@@ -1,6 +1,6 @@
 def main():
     import os
-    from convert.convertor import CustomConvert
+    from reader.chreader import CHReader
 
     email = os.environ.get('USER_EMAIL')
     description = os.environ.get('DESCRIPTION')
@@ -13,9 +13,12 @@ def main():
     print('Description: ', description)
     print('Username: ', username)
     print('Test_var: ', test_var)
-    cs = CustomConvert()
+    chreader = CHReader(['CHANGELOG.md', 'RELEASE-NOTES.md'])
 
-    ch_data = cs.get_transcript()
+    ch_data = chreader.get_transcript()
+    file_name = chreader.get_file_name()
+    print(file_name)
+
     if not ch_data:
         description = 'Nasazení nové konfigurace aplikace'
     else:
