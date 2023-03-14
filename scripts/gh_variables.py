@@ -36,5 +36,5 @@ def main():
 
 
 if __name__ == '__main__':
-    print(sys.path)
+    print('this here', sys.path)
     main()
