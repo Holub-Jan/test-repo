@@ -8,7 +8,6 @@ def main():
     test_var = os.environ.get('TEST_VAR')
     repo = os.environ.get('REPO')
     print(repo)
-    print(repo.split('/'))
     print('Email: ', email)
     print('Description: ', description)
     print('Username: ', username)
@@ -32,10 +31,6 @@ def main():
             description = f'Přidání nových fukncí s verzí {version}'
 
     print(description)
-
-
-
-
 
 
 if __name__ == '__main__':

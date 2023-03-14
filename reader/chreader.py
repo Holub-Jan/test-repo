@@ -44,9 +44,9 @@ class CHReader:
                 features = True
             elif line_cat == 'bugs':
                 bugs = True
-
-        block = Version(version=version, features=features, bug_fixes=bugs)
-        versions.append(block)
+        if version is not None:
+            block = Version(version=version, features=features, bug_fixes=bugs)
+            versions.append(block)
         return versions
 
     def get_file_name(self):
