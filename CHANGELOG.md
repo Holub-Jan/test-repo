@@ -21,6 +21,6 @@
 
 ## 1.0.0
 
-### Bug fixes
+### Bug Fixes
 
 * just bugs here

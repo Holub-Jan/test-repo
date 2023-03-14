@@ -13,10 +13,26 @@ def main():
     print('Description: ', description)
     print('Username: ', username)
     print('Test_var: ', test_var)
-
     cs = CustomConvert()
 
-    cs.main()
+    ch_data = cs.get_transcript()
+    if not ch_data:
+        description = 'Nasazení nové konfigurace aplikace'
+    else:
+        latest_version = ch_data[0]
+        version = latest_version.version
+        if latest_version.features and latest_version.bug_fixes:
+            description = f'Přidání nových fukncí a opravení chyb s verzí {version}'
+        elif not latest_version.features and latest_version.bug_fixes:
+            f'Opravení chyb s verzí {version}'
+        elif latest_version.features and not latest_version.bug_fixes:
+            f'Přidání nových fukncí s verzí {version}'
+
+    print(description)
+
+
+
+
 
 
 if __name__ == '__main__':
