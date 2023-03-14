@@ -5,7 +5,7 @@ def main():
     print(sys.path)
 
     import os
-    from chreader.chreader import CHReader
+    from change_log_reader.change_log_reader import CHReader
 
     email = os.environ.get('USER_EMAIL')
     description = os.environ.get('DESCRIPTION')
