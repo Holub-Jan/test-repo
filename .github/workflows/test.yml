@@ -22,7 +22,9 @@ jobs:
             USERNAME: ${{ github.event.head_commit.author.username }}
             DESCRIPTION: ${{ github.event.head_commit.message }}
             REPO: ${{ github.repository }}
-        run: python gh_variables.py
+        run: |
+          pip install -r requirements.txt 
+          python gh_variables.py
 
       - name: what is X on pr
         run: echo ${{ github.repository }}
