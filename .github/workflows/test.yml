@@ -24,7 +24,7 @@ jobs:
             REPO: ${{ github.repository }}
         run: |
           pip install -r requirements.txt 
-          python gh_variables.py
+          python scripts/gh_variables.py
 
       - name: what is X on pr
         run: echo ${{ github.repository }}
