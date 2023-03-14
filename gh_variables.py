@@ -24,9 +24,9 @@ def main():
         if latest_version.features and latest_version.bug_fixes:
             description = f'Přidání nových fukncí a opravení chyb s verzí {version}'
         elif not latest_version.features and latest_version.bug_fixes:
-            f'Opravení chyb s verzí {version}'
+            description = f'Opravení chyb s verzí {version}'
         elif latest_version.features and not latest_version.bug_fixes:
-            f'Přidání nových fukncí s verzí {version}'
+            description = f'Přidání nových fukncí s verzí {version}'
 
     print(description)
 
