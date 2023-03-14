@@ -1,4 +1,9 @@
+import sys
+
+
 def main():
+    print(sys.path)
+
     import os
     from chreader.chreader import CHReader
 
