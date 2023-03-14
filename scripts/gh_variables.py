@@ -2,8 +2,6 @@ import sys
 
 
 def main():
-    print(sys.path)
-
     import os
 
     email = os.environ.get('USER_EMAIL')
@@ -38,4 +36,5 @@ def main():
 
 
 if __name__ == '__main__':
+    print(sys.path)
     main()
