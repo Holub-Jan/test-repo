@@ -14,7 +14,7 @@ class CustomConvert:
 
         with open(os.path.abspath(os.getcwd())+'/'+file_name, 'r') as file:
             for line in file.readlines():
-                if line != '':
+                if line != '/n':
                     print(line)
 
     def _file_present(self):
