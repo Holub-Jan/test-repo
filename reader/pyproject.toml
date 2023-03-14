@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chreader"
+authors = [
+    {name = "Jan Holub"},
+]
+description = "Reads changelog data as per need"
+requires-python = ">=3.7"
+dependencies = [
+    "pydantic",
+]
