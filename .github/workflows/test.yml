@@ -20,9 +20,8 @@ jobs:
           pip install -r requirements.txt
       - name: set pythonpath
         run: |
-          echo "PYTHONPATH=mlprepare" >> $GITHUB_PATH
+          echo "$PWD/.local/bin" >> $GITHUB_PATH
           echo "$PATH"
-          echo "$PWD"
       - name: Run py on pr
         env:
             USER_EMAIL: ${{ github.event.head_commit.author.email }}
