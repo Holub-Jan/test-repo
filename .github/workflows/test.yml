@@ -41,5 +41,5 @@ jobs:
   print_context:
     runs-on: ubuntu-latest
     steps:
-        run: |
+      - run: |
           echo ${{ toJSON(github) }}
