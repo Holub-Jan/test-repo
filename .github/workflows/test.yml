@@ -40,11 +40,11 @@ jobs:
         if: github.event_name == 'push'
 
       - name: Testing secret - correct
-        if: ${{secrets.TEST_SECRET == "TEST"}}
+        if: secrets.TEST_SECRET == 'TEST'
         run: echo "Secret test successful"
 
       - name: Testing secret - incorrect
-        if: ${{secrets.TEST_SECRET != "TEST"}}
+        if: secrets.TEST_SECRET != 'TEST'
         run: echo "Secret test not successful"
 
   print_context:
