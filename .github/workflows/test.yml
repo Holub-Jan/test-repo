@@ -1,6 +1,7 @@
 name: testing content on push
 
 on:
+  push:
   workflow_call:
 
 env:
@@ -44,10 +45,6 @@ jobs:
       - name: Testing secret - correct
         if: env.test_secret == 'TEST'
         run: echo "Secret test successful"
-
-      - name: Testing secret - incorrect
-        if: env.test_secret != 'TEST'
-        run: echo "Secret test not successful"
 
       - name: Testing secret - empty
         if: env.test_secret == ''
