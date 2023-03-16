@@ -34,7 +34,7 @@ jobs:
           python ${GITHUB_WORKSPACE}/scripts/gh_variables.py
 
       - name: what is X on pr
-        run: echo ${{ GITHUB_WORKSPACE }}
+        run: echo ${ GITHUB_WORKSPACE }
 
       - name: Sets env vars for release
         run: |
