@@ -1,5 +1,5 @@
 name: calling workflow
-on: push
+on: workflow_dispatch
 jobs:
   caller:
     uses: ./.github/workflows/test.yml

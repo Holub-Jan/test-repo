@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       test_secret: ${{ secrets.TEST_SECRET }}
-      test_token: ${{ secrets.GIT_ACCESS_TOKEN }}
+      test_token: ${{ secrets.GHTOKEN }}
     steps:
       - name: Testing secret - correct
         if: env.test_secret == 'TEST'
