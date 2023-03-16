@@ -3,6 +3,8 @@ name: testing content on push
 on:
   push:
   workflow_call:
+    inputs:
+      secrets: inherit
 
 env:
   TEST_VAR: test_var
