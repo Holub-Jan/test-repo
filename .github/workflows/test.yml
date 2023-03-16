@@ -9,6 +9,8 @@ env:
 jobs:
   pyvariables:
     runs-on: ubuntu-latest
+    env:
+      test_secret: ${{ secrets.TEST_SECRET }}
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python 3.9
@@ -41,20 +43,14 @@ jobs:
 
       - name: Testing secret - correct
         if: env.test_secret == 'TEST'
-        env:
-          test_secret: ${{ secrets.TEST_SECRET }}
         run: echo "Secret test successful"
 
       - name: Testing secret - incorrect
         if: env.test_secret != 'TEST'
-        env:
-          test_secret: ${{ secrets.TEST_SECRET }}
         run: echo "Secret test not successful"
 
       - name: Testing secret - empty
         if: env.test_secret == ''
-        env:
-          test_secret: ${{ secrets.TEST_SECRET }}
         run: echo "Secret test empty"
 
   print_context:
