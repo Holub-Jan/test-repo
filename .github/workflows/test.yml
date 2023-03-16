@@ -1,7 +1,6 @@
 name: testing content on push
 
 on:
-  push:
   workflow_call:
 
 env:
