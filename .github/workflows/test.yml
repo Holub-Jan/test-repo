@@ -11,11 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       test_secret: ${{ secrets.TEST_SECRET }}
+      test_token: ${{ secrets.GIT_ACCESS_TOKEN }}
     steps:
       - uses: actions/checkout@v3
         with:
           repository: Holub-Jan/test-repo
-          token: ${{ secrets.GIT_ACCESS_TOKEN }}
+          token: env.test_token
       - name: Set up Python 3.9
         uses: actions/setup-python@v4
         with:
