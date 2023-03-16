@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Test secret true
         if: env.secret_test == 'TEST'
+        run: echo 'success'
       - name: Checkout
         uses: actions/checkout@v3.4.0
         with:
