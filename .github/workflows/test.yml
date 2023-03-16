@@ -19,7 +19,7 @@ jobs:
           python-version: 3.9
       - name: requirements
         run: |
-          pip install -r workflowtesting/requirements.txt
+          pip install -r ${GITHUB_WORKSPACE}/requirements.txt
       - name: set pythonpath
         run: |
           echo "PYTHONPATH=${PYTHONPATH}:${HOME}/${{github.event.repository.name}}" >> $GITHUB_ENV
@@ -31,7 +31,7 @@ jobs:
             DESCRIPTION: ${{ github.event.head_commit.message }}
             REPO: ${{ github.repository }}
         run: |
-          python workflowtesting/scripts/gh_variables.py
+          python ${GITHUB_WORKSPACE}/scripts/gh_variables.py
 
       - name: what is X on pr
         run: echo ${{ github.repository }}
