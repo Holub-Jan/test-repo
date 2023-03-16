@@ -41,11 +41,11 @@ jobs:
         if: github.event_name == 'push'
 
       - name: Testing secret - correct
-        if: env.test_secret == 'TEST'
+        if: env.test_secret == "TEST"
         run: echo "Secret test successful"
 
       - name: Testing secret - incorrect
-        if: env.test_secret != 'TEST'
+        if: env.test_secret != "TEST"
         run: echo "Secret test not successful"
 
   print_context:
