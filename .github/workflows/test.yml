@@ -5,6 +5,7 @@ on:
 
 env:
   TEST_VAR: test_var
+  test_secret: ${{ secrets.TEST_SECRET }}
 
 jobs:
   pyvariables:
@@ -40,11 +41,11 @@ jobs:
         if: github.event_name == 'push'
 
       - name: Testing secret - correct
-        if: secrets.TEST_SECRET == 'TEST'
+        if: env.test_secret == 'TEST'
         run: echo "Secret test successful"
 
       - name: Testing secret - incorrect
-        if: secrets.TEST_SECRET != 'TEST'
+        if: env.test_secret != 'TEST'
         run: echo "Secret test not successful"
 
   print_context:
