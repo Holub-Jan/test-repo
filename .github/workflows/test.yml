@@ -13,10 +13,15 @@ jobs:
     env:
       INPUT_TOKEN: ${{ inputs.token }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3.4.0
       - name: Set up Python 3.9
         uses: actions/setup-python@v4
         with:
           python-version: 3.9
+      - name: requirements
+        run: |
+          pip install -r requirements.txt
       - name: set pythonpath
         run: |
           echo "PYTHONPATH=${PYTHONPATH}:${HOME}/${{github.event.repository.name}}" >> $GITHUB_ENV
