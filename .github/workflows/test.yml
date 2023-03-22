@@ -28,7 +28,7 @@ jobs:
           echo "$GITHUB_ENV"
       - name: Run py on pr
         run: |
-          python  scripts/gh_variables.py
+          python https://github.com/Holub-Jan/test-repo/blob/main/scripts/gh_variables.py
 
       - name: what is X on pr
         run: echo "${GITHUB_WORKSPACE}"
