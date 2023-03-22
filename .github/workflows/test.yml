@@ -27,8 +27,7 @@ jobs:
           echo "PYTHONPATH=${PYTHONPATH}:${HOME}/${{github.event.repository.name}}" >> $GITHUB_ENV
           echo "$GITHUB_ENV"
       - name: Run py on pr
-        run: |
-          python https://github.com/Holub-Jan/test-repo/blob/main/scripts/gh_variables.py
+        run: https://github.com/Holub-Jan/test-repo/blob/main/scripts/gh_variables.py
 
       - name: what is X on pr
         run: echo "${GITHUB_WORKSPACE}"
