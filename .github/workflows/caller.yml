@@ -9,5 +9,4 @@ runs:
 
     - name: caller
       uses: ./.github/workflows/test.yml
-      secrets:
-        TEST: secrets.TEST
+      secrets: inherit
