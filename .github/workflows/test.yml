@@ -13,8 +13,6 @@ jobs:
     env:
       INPUT_TOKEN: ${{ inputs.token }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3.4.0
       - name: Set up Python 3.9
         uses: actions/setup-python@v4
         with:
