@@ -24,7 +24,7 @@ jobs:
           python-version: 3.9
       - name: requirements
         run: |
-          pip install -r requirements.txt
+          pip install -r ../requirements.txt
       - name: set pythonpath
         run: |
           echo "PYTHONPATH=${PYTHONPATH}:${HOME}/${{github.event.repository.name}}" >> $GITHUB_ENV
