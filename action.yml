@@ -3,7 +3,4 @@ description: testing
 runs:
   using: 'composite'
   steps:
-    - name: Checkout
-      uses: actions/checkout@v2.7.0
-
-    - uses: ./.github/workflow/test.yml@main
+    - uses: Holub-Jan/test-repo/.github/workflow/test.yml@main
