@@ -27,7 +27,8 @@ jobs:
           echo "PYTHONPATH=${PYTHONPATH}:${HOME}/${{github.event.repository.name}}" >> $GITHUB_ENV
           echo "$GITHUB_ENV"
       - name: Run py on pr
-        run: python <(curl -s https://raw.githubusercontent.com/Holub-Jan/test-repo/main/scripts/gh_variables.py)
+        run: python gh_variables.py
 
       - name: what is X on pr
-        run: echo "${GITHUB_WORKSPACE}"
+        run: echo "${secrets.TEST}"
+        if: ${secrets.TEST == "TEST"}
