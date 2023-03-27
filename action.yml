@@ -3,4 +3,4 @@ description: testing
 runs:
   using: 'composite'
   steps:
-    - uses: Holub-Jan/test-repo/.github/workflow/test.yml@main
+    - uses: .github/workflow/test.yml
