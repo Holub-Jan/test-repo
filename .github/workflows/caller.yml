@@ -1,12 +1,13 @@
 name: calling workflow
 on:
   workflow_call:
-runs:
-  using: "composite"
-  steps:
-    - name: checkout
-      uses: actions/checkout@v2.7.0
+jobs:
+  runs:
+    using: "composite"
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2.7.0
 
-    - name: caller
-      uses: ./.github/workflows/test.yml
-      secrets: inherit
+      - name: caller
+        uses: ./.github/workflows/test.yml
+        secrets: inherit
