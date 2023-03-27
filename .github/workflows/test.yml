@@ -31,4 +31,4 @@ jobs:
 
       - name: what is X on pr
         run: echo "${secrets.TEST}"
-        if: ${{secrets.TEST == "TEST"}}
+        if: ${{secrets.TEST == 'TEST'}}
