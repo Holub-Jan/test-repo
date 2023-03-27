@@ -3,4 +3,4 @@ description: testing
 runs:
   using: 'composite'
   steps:
-    - uses: .github/workflow/test.yml
+    - uses: .github/workflow/test.yml@main
