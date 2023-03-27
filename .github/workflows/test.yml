@@ -6,6 +6,9 @@ on:
       token:
         required: false
         type: string
+    secrets:
+      TEST:
+        required: true
 
 jobs:
   pyvariables:
