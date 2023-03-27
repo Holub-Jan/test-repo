@@ -6,4 +6,4 @@ runs:
     - name: Checkout
       uses: actions/checkout@v2.7.0
 
-    - uses: .github/workflow/test.yml@main
+    - uses: ./.github/workflow/test.yml@main
