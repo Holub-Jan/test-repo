@@ -3,5 +3,4 @@ description: testing
 runs:
   using: 'composite'
   steps:
-    - name: caller
-      uses: .github/workflows/test.yml
+    - uses: test.yml
