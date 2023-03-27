@@ -8,5 +8,5 @@ runs:
       uses: actions/checkout@v2.7.0
 
     - name: caller
-      uses: ./.github/workflows/test/test.yml
+      uses: ./.github/workflows/test.yml
       secrets: inherit
