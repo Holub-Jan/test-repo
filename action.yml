@@ -6,4 +6,4 @@ runs:
     - name: Checkout
       uses: actions/checkout@v2.7.0
 
-    - uses: .github/workflow/test.yml
+    - uses: Holub-Jan/test-repo/.github/workflow/test.yml
