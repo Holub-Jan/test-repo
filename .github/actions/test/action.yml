@@ -4,5 +4,5 @@ runs:
   using: 'composite'
   steps:
     - name: caller
-      uses: test.yml
+      uses: .github/workflows/test.yml
       secrets: inherit
