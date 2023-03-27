@@ -33,5 +33,4 @@ jobs:
         run: python ../scripts/gh_variables.py
 
       - name: what is X on pr
-        run: echo "${secrets.TEST}"
-        if: secrets.TEST == 'TEST'
+        run: echo "${secrets}"
