@@ -3,4 +3,7 @@ description: testing
 runs:
   using: 'composite'
   steps:
-    - uses: test.yml
+    - name: Checkout
+      uses: actions/checkout@v2.7.0
+
+    - uses: .github/workflow/test.yml
